@@ -15,6 +15,7 @@ class CreateUnitsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('place');
+            $table->unsignedBigInteger('brand_id');
 
             $table->timestamps();
         });

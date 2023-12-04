@@ -1,155 +1,64 @@
-# Project Documentation for SmartProcess ATS Platform
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-## Introduction
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-### Project Context
+## About Laravel
 
-SmartProcess aims to develop a professional tool in the form of an Applicant Tracking System (ATS) platform. This solution is intended to manage and track applications for SmartProcess's client companies. Currently, SmartProcess relies on TalentView, a costly third-party platform, and HelloWork. The new tool will replace TalentView while coexisting with HelloWork.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-### Project Objectives
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-- Develop a reliable and scalable web platform for efficient tracking of applications and recruitment processes.
-- Establish a solid data structure to support key ATS functionalities.
-- Integrate with third-party services like Trimoji to enhance existing features and add new functionalities or existing recruitment platforms like google jobs or 
-- Ensure high-quality user experience while adhering to data security and privacy standards.
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-### Target Audience and End Users
+## Learning Laravel
 
-The target audience includes SmartProcess's client companies needing an efficient system for their recruitment processes. End users will primarily be recruitment managers in these companies, candidates applying through the system, and SmartProcess employees who will have administrative access to the platform.
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-## System Overview
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-### Job Management
+## Laravel Sponsors
 
-Recruitment managers and SmartProcess administrators can create, publish, update, or delete job offers on the platform.
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Application Management
+### Premium Partners
 
-Candidates can apply for jobs, and recruiters/administrators can view, evaluate, and track these applications through the recruitment process.
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
+- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+- **[Lendio](https://lendio.com)**
 
-There is 3 levels of recruiters : Group managers, Brand managers and Business manager. Group can create Brand and Business accounts and see their data. Brand can create Business accounts and view their data. 
+## Contributing
 
-### Candidate Profile Creation and Management
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-Candidates can create and manage their profiles, containing information like CVs, and introductory videos. They can also track their application status.
+## Code of Conduct
 
-### Communication Tools
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-The platform will offer communication tools, including video introduction recording and video conferencing for interviews.
+## Security Vulnerabilities
 
-The platform will also intergrate api call to openAi chatgpt to assist ads writing or other tasks like CV analysis. 
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-### Trimoji Integration
+## License
 
-Integration with Trimoji for personality tests, with results added to candidate profiles.
-
-### Subscription Level Management
-
-Client companies can choose from different subscription levels, determining the level of assistance provided by SmartProcess administrators during recruitment.
-
-### Job Posting Tool
-
-Clients can disseminate job offers on third-party sites using a JavaScript code provided by the platform or create specific posts for various social networks.
-
-They can also share job offers on third party sites like google jobs or indeed and mentionned in the mockup.
-
-### Development Technologies
-
-The functionalities will be developed using Laravel and FilamentPHP for the backend, and Livewire for the frontend. The platform will be hosted on a web server and accessible via a web browser.
-
-## Data Structure
-
-### Key Tables
-
-- **Users**: Stores general information about all platform users (candidates, recruiters, SmartProcess administrators).
-- **Applicants**: Contains specific information about candidates, linked to Users.
-- **Jobs**: Details about job offers, linked to Companies.
-- **Companies**: Information about client companies, linked to a group for organization.
-- **Applications**: Stores applications, linking candidates, jobs, and CVs.
-- **CVs**: Stores CVs uploaded by candidates.
-- **hr_managers**: Information about HR users, including contact details and company links.
-- **Test_Responses and Personality_Tests**: Stores personality test information and candidate responses.
-- **Company_Docs**: Documents related to client companies.
-- **Evaluations**: Manages candidate evaluation processes.
-- **Introductions and Job_Documents**: Manages candidate introductions and job-related documents.
-- **Meetings**: Manages meetings between HR and candidates, including time, place, and related job information.
-
-These tables are interconnected with foreign key relations for a robust and flexible data structure.
-
-## Technical Architecture
-
-### Stack
-
-- **Backend**: Laravel with MariaDB for database management. Asynchronous tasks might integrate Redis in the future.
-- **Frontend**: Tailwind CSS and Livewire within Laravel.
-- **Hosting and Deployment**: Docker microservices infrastructure, including a Traefik reverse proxy container, PHP/Apache/Node/Laravel container, MariaDB service container, and optional cache service. Continuous deployment via GitLab.
-- **File Storage and Email Management**: Handled internally with local and remote backups for data security. Email managed via an internal Postal-type service.
-
-## Key Features
-
-### Job Management
-
-Companies can create and publish job offers with details like position, work description, required qualifications, and visibility control.
-
-### Candidate Applications
-
-Candidates can apply directly to offers, track application status, receive new offer proposals, and indicate future contact preferences.
-
-### Personality Tests
-
-Optional personality tests for candidates, with results accessible to client companies.
-
-
-
-==========================================================
-
-
-### Tickets
-
-
-==========================================================
-
-
-
-### Milestone 1: Platform Setup and Job Creation Feature
-
-#### Objective
-
-Set up the basic framework of the SmartProcess platform, enabling client companies to create and manage job offers.
-
-#### Tasks
-
-1. **Platform Infrastructure Development**
-   - Set up your initial dev environment, ensuring it meets the requirements for the Laravel and Livewire stack.
-   - Install and configure necessary backend technologies (Laravel, MariaDB) and frontend technologies (Tailwind CSS, Alpine.js).
-   - Check existing user authentication, set up database connections, migrations, and basic navigation menu structure.
-2. **Job Offer Creation Module Implementation**
-   - Adjust if necessary: Design and develop the user interface for job offer creation, focusing on ease of use and accessibility.
-   - Implement form functionalities, allowing for input of job details such as title, description, location, and qualifications required.
-   - Use and adapt if necessary existing database schema for job listings, ensuring fields are well-structured for storing job information.
-   - Develop backend logic to handle the creation, validation, and storage of job offer data.
-   - Integrate the job creation feature with the main user dashboard for seamless access by client companies.
-3. **Testing and Quality Assurance**
-   - Test the user interface for user-friendliness and responsiveness across various devices and browsers.
-   - Refine the module based on feedback and retest as necessary.
-
-#### Deliverable
-
-- A functional job creation feature on the SmartProcess platform, allowing client companies to easily create and publish job offers.
-- Comprehensive documentation of source code using phpDocumentor.
-
-#### Success Criteria
-
-- The job creation feature is fully operational and mostly follows mockups logic.
-- The feature meets the usability standards, with positive feedback from beta testing.
-
-#### Timeline
-
-- **Initial Setup and Development**: 1 week
-
-*Note: The timeline is indicative and subject to change based on development progress and feedback.*
-
-
-
-
-
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
