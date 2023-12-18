@@ -99,54 +99,6 @@ Candidates can apply directly to offers, track application status, receive new o
 
 Optional personality tests for candidates, with results accessible to client companies.
 
-
-
-==========================================================
-
-
-### Tickets
-
-
-==========================================================
-
-
-
-### Milestone 1: Platform Setup and Job Creation Feature
-
-#### Objective
-
-Set up the basic framework of the SmartProcess platform, enabling client companies to create and manage job offers.
-
-#### Tasks
-
-1. **Platform Infrastructure Development**
-   - Set up your initial dev environment, ensuring it meets the requirements for the Laravel and Livewire stack.
-   - Install and configure necessary backend technologies (Laravel, MariaDB) and frontend technologies (Tailwind CSS, Alpine.js).
-   - Check existing user authentication, set up database connections, migrations, and basic navigation menu structure.
-2. **Job Offer Creation Module Implementation**
-   - Adjust if necessary: Design and develop the user interface for job offer creation, focusing on ease of use and accessibility.
-   - Implement form functionalities, allowing for input of job details such as title, description, location, and qualifications required.
-   - Use and adapt if necessary existing database schema for job listings, ensuring fields are well-structured for storing job information.
-   - Develop backend logic to handle the creation, validation, and storage of job offer data.
-   - Integrate the job creation feature with the main user dashboard for seamless access by client companies.
-3. **Testing and Quality Assurance**
-   - Test the user interface for user-friendliness and responsiveness across various devices and browsers.
-   - Refine the module based on feedback and retest as necessary.
-
-#### Deliverable
-
-- A functional job creation feature on the SmartProcess platform, allowing client companies to easily create and publish job offers.
-- Comprehensive documentation of source code using phpDocumentor.
-
-#### Success Criteria
-
-- The job creation feature is fully operational and mostly follows mockups logic.
-- The feature meets the usability standards, with positive feedback from beta testing.
-
-#### Timeline
-
-- **Initial Setup and Development**: 1 week
-
 *Note: The timeline is indicative and subject to change based on development progress and feedback.*
 
 
